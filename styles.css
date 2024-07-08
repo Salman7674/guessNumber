@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f9fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  form {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  input[type="submit"]:hover {
+    background: #0056b3;
+  }
+  
+  .resultParas {
+    margin-top: 1rem;
+  }
+  
+  .guesses,
+  .lastResult,
+  .lowOrHi {
+    font-size: 18px;
+    margin: 0.5rem 0;
+  }
+  
+  .lowOrHi h2 {
+    margin: 0;
+    color: #ff0000;
+    animation: fadeIn 0.5s;
+  }
+  
+  .button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .button:hover {
+    background: #218838;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .lowOrHi.correct {
+    color: #28a745;
+    animation: correctGuess 1s ease-in-out;
+  }
+  
+  @keyframes correctGuess {
+    0% {
+      transform: scale(1);
+      background-color: #28a745;
+      color: white;
+    }
+    50% {
+      transform: scale(1.2);
+      background-color: #218838;
+    }
+    100% {
+      transform: scale(1);
+      background-color: #28a745;
+    }
+  }
